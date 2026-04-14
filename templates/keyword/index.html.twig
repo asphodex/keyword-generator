@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Генератор ключевых фраз{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('styles/keyword.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="keyword-page">
+        <h1 class="keyword-page__title">Генератор ключевых фраз</h1>
+
+        <form class="keyword-form" method="post" data-turbo="false">
+            <div class="keyword-form__group">
+                <label class="keyword-form__label" for="input">Исходные данные</label>
+                <textarea
+                    class="keyword-form__textarea"
+                    id="input"
+                    name="input"
+                    placeholder="Honda, Honda CRF, Honda CRF-450X&#10;Владивосток, Приморский край -Владивосток&#10;продажа, покупка, цена, с пробегом"
+                >{{ input }}</textarea>
+            </div>
+            <button class="keyword-form__submit" type="submit">Сгенерировать</button>
+        </form>
+
+        {% if keywords is not empty %}
+            <div class="keyword-results">
+                <div class="keyword-results__header">
+                    <span class="keyword-results__count">Сгенерировано фраз: {{ keywords|length }}</span>
+                    <button class="keyword-results__copy-btn">Копировать всё</button>
+                </div>
+                <ul class="keyword-results__list">
+                    {% for keyword in keywords %}
+                        <li class="keyword-results__item">{{ keyword }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('scripts/keyword.js') }}"></script>
+{% endblock %}

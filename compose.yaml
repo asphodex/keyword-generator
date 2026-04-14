@@ -1,0 +1,24 @@
+services:
+  app:
+    build:
+      context: .
+      target: base
+    environment:
+      APP_SECRET: ${APP_SECRET}
+    networks:
+      - keyword_generator
+
+  nginx:
+    build:
+      context: .
+      target: nginx
+    ports:
+      - "8080:80"
+    depends_on:
+      app:
+        condition: service_started
+    networks:
+      - keyword_generator
+
+networks:
+  keyword_generator:

@@ -1,0 +1,98 @@
+.keyword-page {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-family: system-ui, sans-serif;
+}
+
+.keyword-page__title {
+    margin-bottom: 1.5rem;
+}
+
+.keyword-form__group {
+    margin-bottom: 1rem;
+}
+
+.keyword-form__label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.keyword-form__textarea {
+    width: 100%;
+    min-height: 140px;
+    padding: 0.75rem;
+    font-family: monospace;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.keyword-form__textarea:focus {
+    outline: none;
+    border-color: #8d3700;
+    box-shadow: 0 0 0 2px rgba(112, 40, 0, 0.29);
+}
+
+.keyword-form__submit {
+    padding: 0.6rem 1.5rem;
+    background: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.keyword-form__submit:hover {
+    background: rgb(235, 235, 235);
+}
+
+.keyword-results {
+    margin-top: 2rem;
+}
+
+.keyword-results__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.keyword-results__count {
+    color: #000000;
+    font-size: 14px;
+}
+
+.keyword-results__copy-btn {
+    padding: 0.4rem 1rem;
+    background: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.keyword-results__copy-btn:hover {
+    background: rgb(235, 235, 235);
+}
+
+.keyword-results__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+.keyword-results__item {
+    padding: 0.5rem 0.75rem;
+    font-family: monospace;
+    font-size: 14px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.keyword-results__item {
+    background: #fafafa;
+}
